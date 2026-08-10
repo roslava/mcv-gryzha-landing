@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лечение грыжи позвоночника у невролога — Медицинский центр Власова | Ставрополь</title>
+  <meta name="description" content="Безоперационное лечение грыжи позвоночника в Медицинском центре Власова. Комплексный подход: фотодинамическая терапия, магнито-импульсная стимуляция, лазеротерапия. Приём невролога в Ставрополе." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --color-bone: #EFEFD0;
+      --color-ink: #004E89;
+      --color-ink-soft: #1A659E;
+      --color-surface: #F7C59F;
+      --color-surface-soft: #F9F5E8;
+      --color-border: rgba(0, 78, 137, 0.18);
+      --color-ember: #FF6B35;
+      --color-hero-bg: #004E89;
+      --color-hero-text: #F9F5E8;
+      --color-hero-muted: rgba(249, 245, 232, 0.75);
+      --font: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --text-body: 17px;
+      --text-heading: 36px;
+      --text-display: clamp(2.5rem, 6vw, 4.25rem);
+      --space-16: 16px;
+      --space-24: 24px;
+      --space-32: 32px;
+      --space-48: 48px;
+      --space-64: 64px;
+      --space-80: 80px;
+      --space-96: 96px;
+      --space-120: 120px;
+      --radius-card: 20px;
+      --radius-btn: 24px;
+      --radius-img: 20px;
+      --max: 1120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      font-size: var(--text-body);
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+      color: var(--color-ink);
+      background: var(--color-bone);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(0, 78, 137, 0.35);
+      -webkit-backdrop-filter: blur(16px) saturate(1.2);
+      backdrop-filter: blur(16px) saturate(1.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .nav-logo img { height: 36px; width: auto; display: block; }
+    .nav-cta {
+      position: relative;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--color-ember); color: #fff;
+      font-size: 15px; font-weight: 500; letter-spacing: 0.02em;
+      padding: 10px 22px; border-radius: var(--radius-btn);
+      overflow: hidden;
+      isolation: isolate;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .nav-cta::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.28) 45%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0.28) 55%,
+        transparent 70%
+      );
+      background-size: 220% 100%;
+      background-position: 120% 0;
+      transition: background-position 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+      pointer-events: none;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .nav-cta:hover {
+        transform: scale(1.04);
+      }
+      .nav-cta:hover::after {
+        background-position: -40% 0;
+      }
+    }
+    .hero {
+      background: var(--color-hero-bg);
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+      isolation: isolate;
+      margin-top: -72px;
+      padding-top: 72px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 0;
+      align-items: stretch;
+      min-height: min(72vh, 640px);
+    }
+    .hero-content {
+      max-width: 32rem;
+      padding: var(--space-80) 0 calc(var(--space-80) + 24px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero-label {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 14px; font-weight: 500; letter-spacing: 0.04em;
+      text-transform: uppercase; color: var(--color-hero-muted);
+      margin-bottom: var(--space-24);
+    }
+    .hero-label::before {
+      content: ''; width: 8px; height: 8px; border-radius: 50%;
+      background: var(--color-ember);
+    }
+    .hero h1 {
+      font-size: var(--text-display);
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--color-hero-text);
+      margin-bottom: var(--space-24);
+    }
+    .hero h1 .line { display: block; }
+    .hero-lead {
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--color-hero-muted);
+      max-width: 38ch;
+      margin-bottom: 40px;
+    }
+    .hero-visual {
+      width: 100%;
+      height: 100%;
+      min-height: min(72vh, 640px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px 40px 0;
+    }
+    .hero-visual-inner {
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 1;
+      background: linear-gradient(145deg, rgba(255,107,53,0.18), rgba(249,245,232,0.08));
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-visual-inner::before {
+      content: '';
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,107,53,0.25), transparent 55%);
+      pointer-events: none;
+    }
+    .hero-icon-wrap {
+      width: 96px;
+      height: 96px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      color: var(--color-ember);
+      position: relative;
+      z-index: 1;
+    }
+    .hero-visual-text {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-hero-muted);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 0 24px;
+    }
+    .btn-ember {
+      position: relative;
+      display: inline-flex; align-items: center; gap: 10px;
+      width: fit-content;
+      background: var(--color-ember); color: #fff;
+      font-size: 16px; font-weight: 500; letter-spacing: 0.01em;
+      padding: 14px 28px; border-radius: var(--radius-btn);
+      border: none; cursor: pointer;
+      overflow: hidden;
+      isolation: isolate;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .btn-ember > * { position: relative; z-index: 1; }
+    .btn-ember::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.28) 45%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0.28) 55%,
+        transparent 70%
+      );
+      background-size: 220% 100%;
+      background-position: 120% 0;
+      transition: background-position 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+      pointer-events: none;
+      z-index: 0;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .btn-ember:hover {
+        transform: scale(1.04);
+      }
+      .btn-ember:hover::after {
+        background-position: -40% 0;
+      }
+    }
+    .btn-ember svg, .btn-ember i { width: 18px; height: 18px; flex-shrink: 0; font-size: 16px; }
+    .shimmer-text {
+      display: block;
+      background-image: linear-gradient(
+        90deg,
+        var(--color-hero-text) 0%,
+        var(--color-hero-text) 35%,
+        #F7C59F 45%,
+        #FF6B35 50%,
+        #F7C59F 55%,
+        var(--color-hero-text) 65%,
+        var(--color-hero-text) 100%
+      );
+      background-size: 250% 100%;
+      background-position: 100% center;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      animation: shimmer-ltr 6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+    }
+    @keyframes shimmer-ltr {
+      0%   { background-position: 100% center; }
+      40%  { background-position: 0% center; }
+      40.01%, 100% { background-position: 100% center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .shimmer-text {
+        animation: none;
+        background-image: none;
+        -webkit-text-fill-color: var(--color-hero-text);
+        color: var(--color-hero-text);
+      }
+    }
+    section { padding: var(--space-96) 0; }
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+    .section-head-left {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--color-ink-soft);
+      letter-spacing: 0.02em;
+    }
+    .section-num { font-size: 15px; font-weight: 500; color: var(--color-ink-soft); }
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: var(--color-ink);
+    }
+    .section-desc {
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--color-ink-soft);
+      max-width: 54ch;
+      margin-bottom: 40px;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .about-card {
+      background: var(--color-surface-soft);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      padding: 32px;
+    }
+    .about-card h3 {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .about-card h3 i {
+      color: var(--color-ember);
+      font-size: 18px;
+    }
+    .about-card p {
+      color: var(--color-ink-soft);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .symptoms-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .symptom-block {
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      padding: 28px;
+    }
+    .symptom-block h3 {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .symptom-block h3 i { color: var(--color-ember); }
+    .symptom-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .symptom-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      color: var(--color-ink-soft);
+      line-height: 1.45;
+    }
+    .symptom-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-ember);
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+    .methods-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .method-card {
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .method-card:hover {
+        border-color: rgba(255, 107, 53, 0.35);
+        transform: translateY(-2px);
+      }
+    }
+    .method-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: rgba(255, 107, 53, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-ember);
+      font-size: 20px;
+    }
+    .method-card h3 {
+      font-size: 18px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .method-num {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-ink-soft);
+      letter-spacing: 0.04em;
+    }
+    .method-card p {
+      font-size: 15px;
+      color: var(--color-ink-soft);
+      line-height: 1.55;
+    }
+    .method-tag {
+      display: inline-flex;
+      align-self: flex-start;
+      margin-top: auto;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--color-ember);
+      background: rgba(255, 107, 53, 0.1);
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .why-card {
+      background: var(--color-surface-soft);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      position: relative;
+    }
+    .why-card-num {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-ink-soft);
+      margin-bottom: 12px;
+      letter-spacing: 0.04em;
+    }
+    .why-card h3 {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .why-card p {
+      font-size: 15px;
+      color: var(--color-ink-soft);
+      line-height: 1.5;
+    }
+    .cta {
+      background: var(--color-hero-bg);
+      color: var(--color-hero-text);
+      padding: var(--space-96) 0;
+    }
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .cta-title {
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .cta-desc {
+      font-size: 17px;
+      color: var(--color-hero-muted);
+      line-height: 1.55;
+      margin-bottom: 32px;
+      max-width: 36ch;
+    }
+    .cta-form {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-card);
+      padding: 32px;
+    }
+    .cta-form label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--color-hero-muted);
+    }
+    .cta-form input[type="text"],
+    .cta-form input[type="tel"] {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font-size: 16px;
+      font-family: inherit;
+      margin-bottom: 20px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .cta-form input::placeholder { color: rgba(255,255,255,0.4); }
+    .cta-form input:focus {
+      border-color: var(--color-ember);
+    }
+    .cta-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 24px;
+      font-size: 13px;
+      color: var(--color-hero-muted);
+      line-height: 1.4;
+    }
+    .cta-check input {
+      margin-top: 3px;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--color-ember);
+      flex-shrink: 0;
+    }
+    .cta-check a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .cta-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 32px;
+    }
+    .cta-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .cta-contact-label {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--color-hero-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-contact-addr {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .cta-contact-phone {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--color-ember);
+      margin-top: 4px;
+    }
+    .footer {
+      background: #003a66;
+      color: rgba(249,245,232,0.7);
+      padding: 28px 0;
+      font-size: 14px;
+      text-align: center;
+    }
+    .footer a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+    .hero-beam-glow, .hero-beam-ring { display: none; }
+    .warning-box {
+      background: rgba(255, 107, 53, 0.08);
+      border: 1px solid rgba(255, 107, 53, 0.25);
+      border-radius: var(--radius-card);
+      padding: 24px 28px;
+      margin-top: 32px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .warning-box i {
+      color: var(--color-ember);
+      font-size: 22px;
+      margin-top: 2px;
+    }
+    .warning-box p {
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--color-ink);
+    }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; min-height: auto; }
+      .hero-content { max-width: none; padding: 48px 0 32px; }
+      .hero-visual { min-height: 280px; padding: 0 0 40px; }
+      .about-grid, .symptoms-grid, .methods-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .cta-grid { grid-template-columns: 1fr; gap: 40px; }
+      section { padding: var(--space-64) 0; }
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: clamp(2rem, 9vw, 2.75rem); }
+      .nav-inner { height: 64px; }
+      .hero { margin-top: -64px; padding-top: 64px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="https://mcv26.ru" class="nav-logo" aria-label="Медицинский центр Власова">
+        <img src="logo.svg" alt="Медицинский центр Власова" width="140" height="36" />
+      </a>
+      <a href="#cta" class="nav-cta">Получить консультацию</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-label">Неврология · Безоперационно</div>
+          <h1 class="shimmer-text">
+            <span class="line">Лечение грыжи</span>
+            <span class="line">позвоночника</span>
+            <span class="line">без операции</span>
+          </h1>
+          <p class="hero-lead">Комплексный подход неврологов Медицинского центра Власова: фотодинамическая терапия, магнито-импульсная стимуляция и лазеротерапия. Возвращаем подвижность и качество жизни.</p>
+          <a href="#cta" class="btn-ember">
+            <span>Записаться на консультацию</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-visual-inner">
+            <div class="hero-icon-wrap">
+              <i class="fa-solid fa-bone" aria-hidden="true"></i>
+            </div>
+            <p class="hero-visual-text">Индивидуальная программа<br>восстановления</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-left">О заболевании</div>
+          <span class="section-num">(01)</span>
+        </div>
+        <h2 class="section-title">Что такое грыжа позвоночника</h2>
+        <p class="section-desc">Межпозвонковый диск состоит из прочного фиброзного кольца и полужидкого студенистого ядра. Он амортизирует нагрузки и обеспечивает подвижность позвоночника. При повреждении кольца ядро выпячивается — это и есть грыжа.</p>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3><i class="fa-solid fa-circle-info"></i> Как развивается</h3>
+            <p>Диск не имеет собственных сосудов и питается диффузией из соседних тканей. Нарушение обмена веществ, гиподинамия, перегрузки, травмы и наследственность постепенно ослабляют фиброзное кольцо. В какой-то момент даже обычное движение или чихание может привести к разрыву — так возникает грыжа.</p>
+          </div>
+          <div class="about-card">
+            <h3><i class="fa-solid fa-exclamation-triangle"></i> Почему опасно</h3>
+            <p>Выпячивание давит на нервный корешок, вызывает воспаление и отёк. Это приводит к сильной боли, снижению чувствительности, слабости в руках или ногах и нарушениям работы внутренних органов. Без лечения возможны тяжёлые последствия вплоть до инвалидности.</p>
+          </div>
+        </div>
+        <div class="warning-box">
+          <i class="fa-solid fa-hand-holding-medical"></i>
+          <p>Грыжа позвоночника — не приговор. В большинстве случаев возможно полноценное безоперационное восстановление при комплексном и своевременном подходе. Специалисты центра Власова подбирают индивидуальную схему лечения для каждого пациента.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SYMPTOMS -->
+    <section id="symptoms" style="background: #fff;">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-left">Симптомы</div>
+          <span class="section-num">(02)</span>
+        </div>
+        <h2 class="section-title">Признаки межпозвоночной грыжи</h2>
+        <p class="section-desc">Многие симптомы похожи на проявления других заболеваний. Важно обратить внимание на характерные признаки и обратиться к неврологу как можно раньше.</p>
+        <div class="symptoms-grid">
+          <div class="symptom-block">
+            <h3><i class="fa-solid fa-stethoscope"></i> Специфические симптомы</h3>
+            <ul class="symptom-list">
+              <li>Зажатость позвоночника в движениях по утрам</li>
+              <li>Онемение конечностей</li>
+              <li>Тупая боль в позвоночнике при вставании</li>
+              <li>Ухудшение осанки</li>
+              <li>Вялость в мышцах</li>
+            </ul>
+          </div>
+          <div class="symptom-block">
+            <h3><i class="fa-solid fa-heart-pulse"></i> Косвенные симптомы</h3>
+            <ul class="symptom-list">
+              <li>Нарушения мочеиспускания</li>
+              <li>Запоры</li>
+              <li>Нарушения менструального цикла</li>
+              <li>Снижение потенции</li>
+            </ul>
+          </div>
+          <div class="symptom-block">
+            <h3><i class="fa-solid fa-location-crosshairs"></i> Особенности боли</h3>
+            <ul class="symptom-list">
+              <li>Боль концентрируется в позвоночнике и часто отдаёт в одну сторону тела</li>
+              <li>Может чувствоваться в груди, руках, плечах, ногах, затылке, промежности</li>
+              <li>Усиливается при движениях, наклонах, кашле</li>
+              <li>Часто проявляется по утрам после длительного положения</li>
+            </ul>
+          </div>
+          <div class="symptom-block">
+            <h3><i class="fa-solid fa-person"></i> По отделам позвоночника</h3>
+            <ul class="symptom-list">
+              <li><strong>Поясничный:</strong> боль в ягодицах и по внешней стороне ноги</li>
+              <li><strong>Крестцовый:</strong> онемение икр, стоп, ягодиц</li>
+              <li><strong>Грудной и шейный:</strong> головные боли, головокружения, боль в груди с иррадиацией в руку, покалывание между лопатками</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METHODS -->
+    <section id="methods">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-left">Методы лечения</div>
+          <span class="section-num">(03)</span>
+        </div>
+        <h2 class="section-title">Безоперационное комплексное лечение</h2>
+        <p class="section-desc">В Медицинском центре Власова применяют современные методики с доказанной эффективностью. Программа составляется индивидуально после тщательного обследования.</p>
+        <div class="methods-grid">
+          <article class="method-card">
+            <div class="method-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3><span class="method-num">01</span> Фотодинамическая терапия (ФДТ)</h3>
+            <p>Низкоинтенсивное лазерное излучение в сочетании с фотосенсибилизаторами избирательно воздействует на патологически изменённые ткани. Уже 1–2 процедуры создают условия для сокращения размеров грыжи и декомпрессии мягких тканей. Безопасно, без токсического воздействия на здоровые клетки.</p>
+            <span class="method-tag">Инновационная методика</span>
+          </article>
+          <article class="method-card">
+            <div class="method-icon"><i class="fa-solid fa-magnet"></i></div>
+            <h3><span class="method-num">02</span> Магнито-импульсная стимуляция (МИС)</h3>
+            <p>Мощный магнитный стимулятор (до 4 Тл) генерирует кратковременные импульсы высокой интенсивности. Поле проникает глубоко и воздействует на спинной мозг, периферические нервы и центры, недоступные другим методам стимуляции.</p>
+            <span class="method-tag">Глубокое воздействие</span>
+          </article>
+          <article class="method-card">
+            <div class="method-icon"><i class="fa-solid fa-sun"></i></div>
+            <h3><span class="method-num">03</span> Лазеротерапия аппаратом «Матрикс»</h3>
+            <p>Сочетанное или отдельное применение красного и инфракрасного лазерного излучения. Улучшает микроциркуляцию, снижает воспаление и отёк, ускоряет восстановительные процессы в тканях позвоночника.</p>
+            <span class="method-tag">Доказанная эффективность</span>
+          </article>
+          <article class="method-card">
+            <div class="method-icon"><i class="fa-solid fa-wave-square"></i></div>
+            <h3><span class="method-num">04</span> Микрополяризация и ТМС</h3>
+            <p>Транскраниальная магнитная стимуляция и микрополяризация — дополнительные методы, которые помогают нормализовать работу нервной системы, снизить болевой синдром и восстановить чувствительность.</p>
+            <span class="method-tag">Нейромодуляция</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why" style="background: #fff;">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-left">Преимущества</div>
+          <span class="section-num">(04)</span>
+        </div>
+        <h2 class="section-title">Почему выбирают центр Власова</h2>
+        <p class="section-desc">Мы не просто снимаем симптомы — помогаем восстановить функцию позвоночника и вернуть качество жизни без операции в большинстве случаев.</p>
+        <div class="why-grid">
+          <article class="why-card">
+            <div class="why-card-num">01</div>
+            <h3>Тщательная диагностика</h3>
+            <p>Перед началом лечения собираем максимум данных о локализации, размере и особенностях грыжи. Это основа точной и безопасной программы.</p>
+          </article>
+          <article class="why-card">
+            <div class="why-card-num">02</div>
+            <h3>Индивидуальный план</h3>
+            <p>Схема лечения учитывает результаты обследования и ваш образ жизни. Процедуры можно совмещать с привычным ритмом без лишних потерь времени.</p>
+          </article>
+          <article class="why-card">
+            <div class="why-card-num">03</div>
+            <h3>Комплексный подход</h3>
+            <p>Сочетаем ФДТ, МИС, лазеротерапию и другие методы. Используем современное оборудование и постоянно внедряем новые эффективные схемы.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="cta">
+      <div class="container">
+        <div class="cta-grid">
+          <div>
+            <h2 class="cta-title">Получите консультацию невролога</h2>
+            <p class="cta-desc">Оставьте заявку — мы свяжемся с вами, ответим на вопросы и подберём удобное время приёма. Два адреса в Ставрополе.</p>
+            <div class="cta-contacts">
+              <div class="cta-contact">
+                <div class="cta-contact-label"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Чехова</div>
+                <p class="cta-contact-addr">г.&nbsp;Ставрополь,<br />ул.&nbsp;Чехова, 45а</p>
+                <a class="cta-contact-phone" href="tel:+78652447044">+7 (8652) 44-70-44</a>
+              </div>
+              <div class="cta-contact">
+                <div class="cta-contact-label"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Тухачевского</div>
+                <p class="cta-contact-addr">г.&nbsp;Ставрополь,<br />ул.&nbsp;Тухачевского, 26/5</p>
+                <a class="cta-contact-phone" href="tel:+78652477366">+7 (8652) 477-366</a>
+              </div>
+            </div>
+          </div>
+          <div class="cta-form">
+            <form action="#" method="post" onsubmit="return false;">
+              <label for="name">Ваше имя</label>
+              <input type="text" id="name" name="name" placeholder="Как к вам обращаться" required autocomplete="name" />
+              <label for="phone">Телефон</label>
+              <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel" />
+              <div class="cta-check">
+                <input type="checkbox" id="agree" name="agree" required />
+                <label for="agree" style="margin:0;font-weight:400;">Я ознакомлен и согласен с «Условиями сбора и обработки персональных данных»</label>
+              </div>
+              <button type="submit" class="btn-ember" style="width:100%;justify-content:center;">
+                <span>Получить консультацию</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <a href="https://mcv26.ru" target="_blank" rel="noopener noreferrer">Медицинский центр Власова</a> · Лечение грыжи позвоночника у невролога · Ставрополь</p>
+    </div>
+  </footer>
+</body>
+</html>
