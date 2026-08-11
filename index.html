@@ -99,6 +99,10 @@
     }
     .hero {
       background: var(--color-hero-bg);
+      background-image: url('https://storage.yandexcloud.net/mcv26/hero-gr.jpg');
+      background-size: cover;
+      background-position: center right;
+      background-repeat: no-repeat;
       padding: 0;
       overflow: hidden;
       position: relative;
@@ -106,7 +110,23 @@
       margin-top: -72px;
       padding-top: 72px;
     }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        rgba(0, 42, 74, 0.92) 0%,
+        rgba(0, 58, 102, 0.82) 38%,
+        rgba(0, 78, 137, 0.45) 62%,
+        rgba(0, 78, 137, 0.15) 100%
+      );
+      z-index: 0;
+      pointer-events: none;
+    }
     .hero-grid {
+      position: relative;
+      z-index: 1;
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
       gap: 0;
@@ -150,56 +170,7 @@
       width: 100%;
       height: 100%;
       min-height: min(72vh, 640px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 24px 40px 0;
-    }
-    .hero-visual-inner {
-      width: 100%;
-      max-width: 420px;
-      aspect-ratio: 1;
-      background: linear-gradient(145deg, rgba(255,107,53,0.18), rgba(249,245,232,0.08));
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 32px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-visual-inner::before {
-      content: '';
-      position: absolute;
-      inset: -40%;
-      background: radial-gradient(circle at 30% 30%, rgba(255,107,53,0.25), transparent 55%);
-      pointer-events: none;
-    }
-    .hero-icon-wrap {
-      width: 96px;
-      height: 96px;
-      border-radius: 28px;
-      background: rgba(255,255,255,0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 42px;
-      color: var(--color-ember);
-      position: relative;
-      z-index: 1;
-    }
-    .hero-visual-text {
-      font-size: 15px;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--color-hero-muted);
-      text-align: center;
-      position: relative;
-      z-index: 1;
-      padding: 0 24px;
+      /* image itself is the visual — keep column for layout balance */
     }
     .btn-ember {
       position: relative;
@@ -604,9 +575,20 @@
       color: var(--color-ink);
     }
     @media (max-width: 900px) {
+      .hero {
+        background-position: 70% center;
+      }
+      .hero::before {
+        background: linear-gradient(
+          180deg,
+          rgba(0, 42, 74, 0.88) 0%,
+          rgba(0, 58, 102, 0.78) 55%,
+          rgba(0, 78, 137, 0.55) 100%
+        );
+      }
       .hero-grid { grid-template-columns: 1fr; min-height: auto; }
-      .hero-content { max-width: none; padding: 48px 0 32px; }
-      .hero-visual { min-height: 280px; padding: 0 0 40px; }
+      .hero-content { max-width: none; padding: 48px 0 56px; }
+      .hero-visual { display: none; }
       .about-grid, .symptoms-grid, .methods-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
       .cta-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -615,7 +597,7 @@
     @media (max-width: 600px) {
       .hero h1 { font-size: clamp(2rem, 9vw, 2.75rem); }
       .nav-inner { height: 64px; }
-      .hero { margin-top: -64px; padding-top: 64px; }
+      .hero { margin-top: -64px; padding-top: 64px; background-position: 75% center; }
     }
   </style>
 </head>
@@ -646,14 +628,7 @@
             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
         </div>
-        <div class="hero-visual">
-          <div class="hero-visual-inner">
-            <div class="hero-icon-wrap">
-              <i class="fa-solid fa-bone" aria-hidden="true"></i>
-            </div>
-            <p class="hero-visual-text">Индивидуальная программа<br>восстановления</p>
-          </div>
-        </div>
+        <div class="hero-visual" aria-hidden="true"></div>
       </div>
     </section>
 
