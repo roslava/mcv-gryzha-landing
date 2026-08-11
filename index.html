@@ -337,18 +337,84 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
+    @property --card-beam {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+    }
+    @keyframes card-beam-spin {
+      to { --card-beam: 360deg; }
+    }
+    .about-card,
+    .symptom-block,
+    .method-card,
+    .why-card {
+      position: relative;
+      border: 1px solid transparent;
+      border-radius: var(--radius-card);
+      isolation: isolate;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .about-card::before,
+    .symptom-block::before,
+    .method-card::before,
+    .why-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1.5px;
+      background: conic-gradient(
+        from var(--card-beam, 0deg),
+        transparent 0deg,
+        color-mix(in srgb, #FF6B35 15%, transparent) 20deg,
+        #FF6B35 50deg,
+        color-mix(in srgb, #FF6B35 40%, #fff) 58deg,
+        transparent 70deg,
+        transparent 180deg,
+        color-mix(in srgb, #1A659E 20%, transparent) 200deg,
+        #1A659E 230deg,
+        color-mix(in srgb, #1A659E 35%, #fff) 238deg,
+        transparent 250deg,
+        transparent 360deg
+      );
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+              mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+      z-index: 1;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .about-card:hover,
+      .symptom-block:hover,
+      .method-card:hover,
+      .why-card:hover {
+        transform: translateY(-6px);
+      }
+      .about-card:hover::before,
+      .symptom-block:hover::before,
+      .method-card:hover::before,
+      .why-card:hover::before {
+        opacity: 1;
+        animation: card-beam-spin 3.2s linear infinite;
+      }
+    }
     .about-card {
       background: var(--color-surface-soft);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-card);
       padding: 0;
-      overflow: hidden;
       display: flex;
       flex-direction: column;
     }
     .about-card .illustration-slot {
       border: none;
-      border-radius: 0;
+      border-radius: var(--radius-card) var(--radius-card) 0 0;
       aspect-ratio: 16 / 10;
       background: rgba(0, 78, 137, 0.04);
       border-bottom: 1px dashed rgba(0, 78, 137, 0.18);
@@ -380,8 +446,6 @@
     }
     .symptom-block {
       background: #fff;
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-card);
       padding: 28px;
     }
     .symptom-block h3 {
@@ -423,19 +487,10 @@
     }
     .method-card {
       background: #fff;
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-card);
       padding: 28px;
       display: flex;
       flex-direction: column;
       gap: 12px;
-      transition: border-color 0.25s ease, transform 0.25s ease;
-    }
-    @media (hover: hover) and (pointer: fine) {
-      .method-card:hover {
-        border-color: rgba(255, 107, 53, 0.35);
-        transform: translateY(-2px);
-      }
     }
     .method-icon {
       width: 48px;
@@ -486,10 +541,7 @@
     }
     .why-card {
       background: var(--color-surface-soft);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-card);
       padding: 28px;
-      position: relative;
     }
     .why-card-num {
       font-size: 13px;
