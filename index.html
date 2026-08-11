@@ -275,18 +275,18 @@
       max-width: 54ch;
       margin-bottom: 40px;
     }
-    .about-intro {
+    .section-intro {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
       align-items: center;
       margin-bottom: 40px;
     }
-    .about-intro .section-desc {
+    .section-intro .section-desc {
       margin-bottom: 0;
       max-width: none;
     }
-    .about-illustration {
+    .illustration-slot {
       position: relative;
       width: 100%;
       aspect-ratio: 4 / 3;
@@ -298,13 +298,13 @@
       justify-content: center;
       overflow: hidden;
     }
-    .about-illustration img {
+    .illustration-slot img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
-    .about-illustration-placeholder {
+    .illustration-slot-label {
       font-size: 14px;
       font-weight: 500;
       letter-spacing: 0.06em;
@@ -321,7 +321,20 @@
       background: var(--color-surface-soft);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-card);
-      padding: 32px;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .about-card .illustration-slot {
+      border: none;
+      border-radius: 0;
+      aspect-ratio: 16 / 10;
+      background: rgba(0, 78, 137, 0.04);
+      border-bottom: 1px dashed rgba(0, 78, 137, 0.18);
+    }
+    .about-card-body {
+      padding: 28px 32px 32px;
     }
     .about-card h3 {
       font-size: 20px;
@@ -626,8 +639,8 @@
       .hero-grid { grid-template-columns: 1fr; min-height: auto; }
       .hero-content { max-width: none; padding: 48px 0 56px; }
       .hero-visual { display: none; }
-      .about-intro, .about-grid, .symptoms-grid, .methods-grid { grid-template-columns: 1fr; }
-      .about-illustration { aspect-ratio: 16 / 10; }
+      .section-intro, .about-grid, .symptoms-grid, .methods-grid { grid-template-columns: 1fr; }
+      .illustration-slot { aspect-ratio: 16 / 10; }
       .why-grid { grid-template-columns: 1fr; }
       .cta-grid { grid-template-columns: 1fr; gap: 40px; }
       section { padding: var(--space-64) 0; }
@@ -678,21 +691,33 @@
           <span class="section-num">(01)</span>
         </div>
         <h2 class="section-title">Что такое грыжа позвоночника</h2>
-        <div class="about-intro">
+        <div class="section-intro">
           <p class="section-desc">Межпозвонковый диск состоит из прочного фиброзного кольца и полужидкого студенистого ядра. Он амортизирует нагрузки и обеспечивает подвижность позвоночника. При повреждении кольца ядро выпячивается — это и есть грыжа.</p>
-          <div class="about-illustration" id="about-illustration">
-            <!-- заменить на <img src="..." alt="Иллюстрация межпозвонковой грыжи" width="640" height="480" loading="lazy" /> -->
-            <span class="about-illustration-placeholder">иллюстрация 001</span>
+          <div class="illustration-slot" id="ill-001">
+            <!-- <img src="..." alt="Иллюстрация межпозвонковой грыжи" width="640" height="480" loading="lazy" /> -->
+            <span class="illustration-slot-label">иллюстрация 001</span>
           </div>
         </div>
         <div class="about-grid">
           <div class="about-card">
-            <h3><i class="fa-solid fa-circle-info"></i> Как развивается</h3>
-            <p>Диск не имеет собственных сосудов и питается диффузией из соседних тканей. Нарушение обмена веществ, гиподинамия, перегрузки, травмы и наследственность постепенно ослабляют фиброзное кольцо. В какой-то момент даже обычное движение или чихание может привести к разрыву — так возникает грыжа.</p>
+            <div class="illustration-slot" id="ill-002">
+              <!-- <img src="..." alt="Как развивается грыжа" width="640" height="400" loading="lazy" /> -->
+              <span class="illustration-slot-label">иллюстрация 002</span>
+            </div>
+            <div class="about-card-body">
+              <h3><i class="fa-solid fa-circle-info"></i> Как развивается</h3>
+              <p>Диск не имеет собственных сосудов и питается диффузией из соседних тканей. Нарушение обмена веществ, гиподинамия, перегрузки, травмы и наследственность постепенно ослабляют фиброзное кольцо. В какой-то момент даже обычное движение или чихание может привести к разрыву — так возникает грыжа.</p>
+            </div>
           </div>
           <div class="about-card">
-            <h3><i class="fa-solid fa-exclamation-triangle"></i> Почему опасно</h3>
-            <p>Выпячивание давит на нервный корешок, вызывает воспаление и отёк. Это приводит к сильной боли, снижению чувствительности, слабости в руках или ногах и нарушениям работы внутренних органов. Без лечения возможны тяжёлые последствия вплоть до инвалидности.</p>
+            <div class="illustration-slot" id="ill-003">
+              <!-- <img src="..." alt="Чем опасна грыжа позвоночника" width="640" height="400" loading="lazy" /> -->
+              <span class="illustration-slot-label">иллюстрация 003</span>
+            </div>
+            <div class="about-card-body">
+              <h3><i class="fa-solid fa-exclamation-triangle"></i> Почему опасно</h3>
+              <p>Выпячивание давит на нервный корешок, вызывает воспаление и отёк. Это приводит к сильной боли, снижению чувствительности, слабости в руках или ногах и нарушениям работы внутренних органов. Без лечения возможны тяжёлые последствия вплоть до инвалидности.</p>
+            </div>
           </div>
         </div>
         <div class="warning-box">
@@ -710,7 +735,13 @@
           <span class="section-num">(02)</span>
         </div>
         <h2 class="section-title">Признаки межпозвоночной грыжи</h2>
-        <p class="section-desc">Многие симптомы похожи на проявления других заболеваний. Важно обратить внимание на характерные признаки и обратиться к неврологу как можно раньше.</p>
+        <div class="section-intro">
+          <p class="section-desc">Многие симптомы похожи на проявления других заболеваний. Важно обратить внимание на характерные признаки и обратиться к неврологу как можно раньше.</p>
+          <div class="illustration-slot" id="ill-004">
+            <!-- <img src="..." alt="Признаки межпозвоночной грыжи" width="640" height="480" loading="lazy" /> -->
+            <span class="illustration-slot-label">иллюстрация 004</span>
+          </div>
+        </div>
         <div class="symptoms-grid">
           <div class="symptom-block">
             <h3><i class="fa-solid fa-stethoscope"></i> Специфические симптомы</h3>
@@ -760,7 +791,13 @@
           <span class="section-num">(03)</span>
         </div>
         <h2 class="section-title">Безоперационное комплексное лечение</h2>
-        <p class="section-desc">В Медицинском центре Власова применяют современные методики с доказанной эффективностью. Программа составляется индивидуально после тщательного обследования.</p>
+        <div class="section-intro">
+          <p class="section-desc">В Медицинском центре Власова применяют современные методики с доказанной эффективностью. Программа составляется индивидуально после тщательного обследования.</p>
+          <div class="illustration-slot" id="ill-005">
+            <!-- <img src="..." alt="Безоперационное лечение грыжи" width="640" height="480" loading="lazy" /> -->
+            <span class="illustration-slot-label">иллюстрация 005</span>
+          </div>
+        </div>
         <div class="methods-grid">
           <article class="method-card">
             <div class="method-icon"><i class="fa-solid fa-lightbulb"></i></div>
@@ -798,7 +835,13 @@
           <span class="section-num">(04)</span>
         </div>
         <h2 class="section-title">Почему выбирают центр Власова</h2>
-        <p class="section-desc">Мы не просто снимаем симптомы — помогаем восстановить функцию позвоночника и вернуть качество жизни без операции в большинстве случаев.</p>
+        <div class="section-intro">
+          <p class="section-desc">Мы не просто снимаем симптомы — помогаем восстановить функцию позвоночника и вернуть качество жизни без операции в большинстве случаев.</p>
+          <div class="illustration-slot" id="ill-006">
+            <!-- <img src="..." alt="Преимущества лечения в центре Власова" width="640" height="480" loading="lazy" /> -->
+            <span class="illustration-slot-label">иллюстрация 006</span>
+          </div>
+        </div>
         <div class="why-grid">
           <article class="why-card">
             <div class="why-card-num">01</div>
