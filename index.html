@@ -480,6 +480,19 @@
       margin-top: 7px;
       flex-shrink: 0;
     }
+    .symptom-list--stack .symptom-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 0;
+    }
+    .symptom-list--stack .symptom-item strong {
+      color: var(--color-ink);
+      font-weight: 500;
+    }
+    .symptom-list--stack .symptom-item span {
+      color: var(--color-ink-soft);
+    }
     .methods-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -876,10 +889,25 @@
           </div>
           <div class="symptom-block">
             <h3><i class="fa-solid fa-person"></i> По отделам позвоночника</h3>
-            <ul class="symptom-list">
-              <li><strong>Поясничный:</strong> боль в ягодицах и по внешней стороне ноги</li>
-              <li><strong>Крестцовый:</strong> онемение икр, стоп, ягодиц</li>
-              <li><strong>Грудной и шейный:</strong> головные боли, головокружения, боль в груди с иррадиацией в руку, покалывание между лопатками</li>
+            <ul class="symptom-list symptom-list--stack">
+              <li>
+                <div class="symptom-item">
+                  <strong>Поясничный</strong>
+                  <span>боль в ягодицах и по внешней стороне ноги</span>
+                </div>
+              </li>
+              <li>
+                <div class="symptom-item">
+                  <strong>Крестцовый</strong>
+                  <span>онемение икр, стоп, ягодиц</span>
+                </div>
+              </li>
+              <li>
+                <div class="symptom-item">
+                  <strong>Грудной и шейный</strong>
+                  <span>головные боли, головокружения, боль в груди с иррадиацией в руку, покалывание между лопатками</span>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
