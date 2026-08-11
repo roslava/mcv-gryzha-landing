@@ -248,18 +248,12 @@
     section { padding: var(--space-96) 0; }
     .section-head {
       display: flex;
-      align-items: flex-start;
+      align-items: baseline;
       justify-content: space-between;
       gap: 16px;
       margin-bottom: var(--space-16);
       padding-bottom: var(--space-16);
       border-bottom: 1px solid var(--color-border);
-    }
-    .section-head-main {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      min-width: 0;
     }
     .section-head-left {
       font-size: 15px;
@@ -267,19 +261,13 @@
       color: var(--color-ink);
       letter-spacing: 0.02em;
     }
-    .section-num {
-      font-size: 15px;
-      font-weight: 500;
-      color: var(--color-ink-soft);
-      flex-shrink: 0;
-      padding-top: 2px;
-    }
+    .section-num { font-size: 15px; font-weight: 500; color: var(--color-ink-soft); }
     .section-title {
       font-size: clamp(1.75rem, 4vw, 2.25rem);
       font-weight: 500;
       letter-spacing: -0.02em;
       line-height: 1.2;
-      margin-bottom: 0;
+      margin-bottom: 16px;
       color: var(--color-ink);
     }
     .section-desc {
@@ -295,6 +283,15 @@
       gap: 40px;
       align-items: center;
       margin-bottom: 40px;
+    }
+    .section-intro-text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-width: 0;
+    }
+    .section-intro-text .section-title {
+      margin-bottom: 0;
     }
     .section-intro .section-desc {
       margin-bottom: 0;
@@ -711,14 +708,14 @@
     <section id="about">
       <div class="container">
         <div class="section-head">
-          <div class="section-head-main">
-            <div class="section-head-left">О заболевании</div>
-            <h2 class="section-title">Что такое грыжа позвоночника</h2>
-          </div>
+          <div class="section-head-left">О заболевании</div>
           <span class="section-num">(01)</span>
         </div>
         <div class="section-intro">
-          <p class="section-desc">Межпозвонковый диск состоит из прочного фиброзного кольца и полужидкого студенистого ядра. Он амортизирует нагрузки и обеспечивает подвижность позвоночника. При повреждении кольца ядро выпячивается — это и есть грыжа.</p>
+          <div class="section-intro-text">
+            <h2 class="section-title">Что такое грыжа позвоночника</h2>
+            <p class="section-desc">Межпозвонковый диск состоит из прочного фиброзного кольца и полужидкого студенистого ядра. Он амортизирует нагрузки и обеспечивает подвижность позвоночника. При повреждении кольца ядро выпячивается — это и есть грыжа.</p>
+          </div>
           <div class="illustration-slot illustration-slot--round" id="ill-001">
             <img src="https://storage.yandexcloud.net/mcv26/grizha_001.jpeg" alt="Иллюстрация: что такое грыжа позвоночника" width="640" height="640" loading="lazy" />
           </div>
@@ -759,17 +756,17 @@
     <section id="symptoms" style="background: #fff;">
       <div class="container">
         <div class="section-head">
-          <div class="section-head-main">
-            <div class="section-head-left">Симптомы</div>
-            <h2 class="section-title">Признаки межпозвоночной грыжи</h2>
-          </div>
+          <div class="section-head-left">Симптомы</div>
           <span class="section-num">(02)</span>
         </div>
         <div class="section-intro section-intro--ill-left">
           <div class="illustration-slot illustration-slot--round" id="ill-004">
             <img src="https://storage.yandexcloud.net/mcv26/gr_005.jpg" alt="Признаки межпозвоночной грыжи" width="640" height="640" loading="lazy" />
           </div>
-          <p class="section-desc">Многие симптомы похожи на проявления других заболеваний. Важно обратить внимание на характерные признаки и обратиться к неврологу как можно раньше.</p>
+          <div class="section-intro-text">
+            <h2 class="section-title">Признаки межпозвоночной грыжи</h2>
+            <p class="section-desc">Многие симптомы похожи на проявления других заболеваний. Важно обратить внимание на характерные признаки и обратиться к неврологу как можно раньше.</p>
+          </div>
         </div>
         <div class="symptoms-grid">
           <div class="symptom-block">
@@ -816,14 +813,14 @@
     <section id="methods">
       <div class="container">
         <div class="section-head">
-          <div class="section-head-main">
-            <div class="section-head-left">Методы лечения</div>
-            <h2 class="section-title">Безоперационное комплексное лечение</h2>
-          </div>
+          <div class="section-head-left">Методы лечения</div>
           <span class="section-num">(03)</span>
         </div>
         <div class="section-intro">
-          <p class="section-desc">В Медицинском центре Власова применяют современные методики с доказанной эффективностью. Программа составляется индивидуально после тщательного обследования.</p>
+          <div class="section-intro-text">
+            <h2 class="section-title">Безоперационное комплексное лечение</h2>
+            <p class="section-desc">В Медицинском центре Власова применяют современные методики с доказанной эффективностью. Программа составляется индивидуально после тщательного обследования.</p>
+          </div>
           <div class="illustration-slot illustration-slot--round" id="ill-005">
             <img src="https://storage.yandexcloud.net/mcv26/gr_006.jpg" alt="Безоперационное комплексное лечение грыжи" width="640" height="640" loading="lazy" />
           </div>
@@ -861,17 +858,17 @@
     <section id="why" style="background: #fff;">
       <div class="container">
         <div class="section-head">
-          <div class="section-head-main">
-            <div class="section-head-left">Преимущества</div>
-            <h2 class="section-title">Почему выбирают центр Власова</h2>
-          </div>
+          <div class="section-head-left">Преимущества</div>
           <span class="section-num">(04)</span>
         </div>
         <div class="section-intro section-intro--ill-left">
           <div class="illustration-slot illustration-slot--round" id="ill-006">
             <img src="https://storage.yandexcloud.net/mcv26/gr_007.jpg" alt="Почему выбирают центр Власова" width="640" height="640" loading="lazy" />
           </div>
-          <p class="section-desc">Мы не просто снимаем симптомы — помогаем восстановить функцию позвоночника и вернуть качество жизни без операции в большинстве случаев.</p>
+          <div class="section-intro-text">
+            <h2 class="section-title">Почему выбирают центр Власова</h2>
+            <p class="section-desc">Мы не просто снимаем симптомы — помогаем восстановить функцию позвоночника и вернуть качество жизни без операции в большинстве случаев.</p>
+          </div>
         </div>
         <div class="why-grid">
           <article class="why-card">
