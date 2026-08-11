@@ -304,6 +304,15 @@
       object-fit: cover;
       display: block;
     }
+    .illustration-slot--round {
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: none;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 12px 40px rgba(0, 78, 137, 0.12);
+    }
     .illustration-slot-label {
       font-size: 14px;
       font-weight: 500;
@@ -640,7 +649,8 @@
       .hero-content { max-width: none; padding: 48px 0 56px; }
       .hero-visual { display: none; }
       .section-intro, .about-grid, .symptoms-grid, .methods-grid { grid-template-columns: 1fr; }
-      .illustration-slot { aspect-ratio: 16 / 10; }
+      .illustration-slot:not(.illustration-slot--round) { aspect-ratio: 16 / 10; }
+      .illustration-slot--round { max-width: 320px; }
       .why-grid { grid-template-columns: 1fr; }
       .cta-grid { grid-template-columns: 1fr; gap: 40px; }
       section { padding: var(--space-64) 0; }
@@ -693,9 +703,8 @@
         <h2 class="section-title">Что такое грыжа позвоночника</h2>
         <div class="section-intro">
           <p class="section-desc">Межпозвонковый диск состоит из прочного фиброзного кольца и полужидкого студенистого ядра. Он амортизирует нагрузки и обеспечивает подвижность позвоночника. При повреждении кольца ядро выпячивается — это и есть грыжа.</p>
-          <div class="illustration-slot" id="ill-001">
-            <!-- <img src="..." alt="Иллюстрация межпозвонковой грыжи" width="640" height="480" loading="lazy" /> -->
-            <span class="illustration-slot-label">иллюстрация 001</span>
+          <div class="illustration-slot illustration-slot--round" id="ill-001">
+            <img src="https://storage.yandexcloud.net/mcv26/grizha_001.jpeg" alt="Иллюстрация: что такое грыжа позвоночника" width="640" height="640" loading="lazy" />
           </div>
         </div>
         <div class="about-grid">
