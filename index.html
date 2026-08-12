@@ -671,8 +671,12 @@
       flex-shrink: 0;
     }
     .cta-check a {
+      color: #fff;
       text-decoration: underline;
       text-underline-offset: 2px;
+    }
+    .cta-check a:hover {
+      color: var(--color-ember);
     }
     .cta-contacts {
       display: flex;
@@ -1023,7 +1027,7 @@
               <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel" />
               <div class="cta-check">
                 <input type="checkbox" id="agree" name="agree" required />
-                <label for="agree" style="margin:0;font-weight:400;">Я ознакомлен и согласен с «Условиями сбора и обработки персональных данных»</label>
+                <label for="agree" style="margin:0;font-weight:400;">Я ознакомлен и согласен с <a href="https://mcv26.ru/politika-obrabotki/" target="_blank" rel="noopener noreferrer">«Условиями сбора и обработки персональных данных»</a></label>
               </div>
               <button type="submit" class="btn-ember" style="width:100%;justify-content:center;">
                 <span>Получить консультацию</span>
