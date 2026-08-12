@@ -389,19 +389,21 @@
       height: 100%;
       object-fit: cover;
       display: block;
+    }
+    .illustration-slot--round img {
       transform: scale(1);
       transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
     }
     @media (hover: hover) and (pointer: fine) {
-      .illustration-slot:hover img {
+      .illustration-slot--round:hover img {
         transform: scale(1.06);
       }
     }
     @media (prefers-reduced-motion: reduce) {
-      .illustration-slot img {
+      .illustration-slot--round img {
         transition: none;
       }
-      .illustration-slot:hover img {
+      .illustration-slot--round:hover img {
         transform: none;
       }
     }
