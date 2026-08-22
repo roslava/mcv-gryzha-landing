@@ -507,9 +507,13 @@
     }
     .about-card .illustration-slot {
       border: none;
-      border-radius: 0;
+      border-radius: var(--radius-card);
       aspect-ratio: 16 / 10;
-      background: var(--color-surface-soft);
+      background: rgba(0, 78, 137, 0.04);
+      margin: 12px 12px 0;
+      width: calc(100% - 24px);
+      align-self: center;
+      overflow: hidden;
     }
     .about-card-body {
       padding: 28px 32px 32px;
