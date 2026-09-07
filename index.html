@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Лечение грыжи позвоночника в Ставрополе — невролог | Медицинский центр Власова</title>
-  <meta name="description" content="Лечение грыжи позвоночника в Ставрополе: консультация невролога, комплексный подход без операции, индивидуальная программа лечения и реабилитации в Медицинском центре Власова. Адреса: ул. Чехова, 45а и ул. Тухачевского, 26/5." />
+  <meta name="description" content="Лечение межпозвоночной грыжи в Ставрополе: консультация невролога, консервативный подход при наличии показаний, индивидуальная программа лечения и реабилитации в Медицинском центре Власова." />
   <link rel="canonical" href="https://gryzha.mcv26.ru/" />
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="website" />
@@ -21,38 +21,100 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "Медицинский центр Власова",
-    "url": "https://gryzha.mcv26.ru/",
-    "image": "https://storage.yandexcloud.net/mcv26/hero-gr.jpg",
-    "description": "Лечение грыжи позвоночника в Ставрополе: консультация невролога, комплексный подход без хирургического вмешательства, индивидуальная программа лечения и реабилитации.",
-    "medicalSpecialty": ["Neurology", "Physiatry"],
-    "telephone": ["+7-8652-44-70-44", "+7-8652-47-73-66"],
-    "address": [
+    "@graph": [
       {
-        "@type": "PostalAddress",
-        "streetAddress": "ул. Чехова, 45а",
-        "addressLocality": "Ставрополь",
-        "addressRegion": "Ставропольский край",
-        "addressCountry": "RU"
+        "@type": "MedicalClinic",
+        "@id": "https://gryzha.mcv26.ru/#medical-clinic",
+        "name": "Медицинский центр Власова",
+        "url": "https://gryzha.mcv26.ru/",
+        "image": "https://storage.yandexcloud.net/mcv26/hero-gr.jpg",
+        "description": "Лечение межпозвоночной грыжи в Ставрополе: консультация невролога, консервативный подход при наличии показаний, индивидуальная программа лечения и реабилитации.",
+        "medicalSpecialty": ["Neurology", "Physiatry"],
+        "telephone": ["+7-8652-44-70-44", "+7-8652-47-73-66"],
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Чехова, 45а",
+            "addressLocality": "Ставрополь",
+            "addressRegion": "Ставропольский край",
+            "addressCountry": "RU"
+          },
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Тухачевского, 26/5",
+            "addressLocality": "Ставрополь",
+            "addressRegion": "Ставропольский край",
+            "addressCountry": "RU"
+          }
+        ],
+        "areaServed": {
+          "@type": "City",
+          "name": "Ставрополь"
+        },
+        "parentOrganization": {
+          "@id": "https://mcv26.ru/#organization",
+          "@type": "Organization",
+          "name": "Медицинский центр Власова",
+          "url": "https://mcv26.ru/"
+        }
       },
       {
-        "@type": "PostalAddress",
-        "streetAddress": "ул. Тухачевского, 26/5",
-        "addressLocality": "Ставрополь",
-        "addressRegion": "Ставропольский край",
-        "addressCountry": "RU"
+        "@type": "Physician",
+        "@id": "https://mcv26.ru/doctors/kolesnikova-darya-yurevna-stavropol/#physician",
+        "name": "Дарья Юрьевна Колесникова",
+        "url": "https://mcv26.ru/doctors/kolesnikova-darya-yurevna-stavropol/",
+        "jobTitle": "Врач-невролог, цефалголог, физиотерапевт",
+        "medicalSpecialty": ["Neurology", "Physiatry"],
+        "worksFor": { "@id": "https://gryzha.mcv26.ru/#medical-clinic" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://gryzha.mcv26.ru/#faq",
+        "url": "https://gryzha.mcv26.ru/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Можно ли лечить межпозвоночную грыжу без операции?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "В ряде случаев возможно консервативное лечение. Подход зависит от симптомов, результатов обследования и общего состояния пациента; тактику определяет врач."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "К какому врачу обращаться при грыже позвоночника?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Первично можно обратиться к врачу-неврологу. Он оценит симптомы, проведёт осмотр и при необходимости определит дальнейшую тактику."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Нужно ли делать МРТ перед приемом невролога?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Не обязательно выполнять МРТ самостоятельно до приёма. Необходимое обследование определяет врач после консультации."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Когда при грыже позвоночника может потребоваться операция?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Необходимость операции определяется индивидуально, с учётом симптомов, неврологического статуса и результатов обследования."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Можно ли заниматься физической активностью при межпозвоночной грыже?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Допустимая физическая активность зависит от состояния пациента и рекомендаций врача. Нагрузку следует подбирать индивидуально."
+            }
+          }
+        ]
       }
-    ],
-    "areaServed": {
-      "@type": "City",
-      "name": "Ставрополь"
-    },
-    "parentOrganization": {
-      "@type": "Organization",
-      "name": "Медицинский центр Власова",
-      "url": "https://mcv26.ru/"
-    }
+    ]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -719,6 +781,44 @@
       color: var(--color-ink-soft);
       line-height: 1.5;
     }
+    .faq-list {
+      display: grid;
+      gap: 12px;
+      max-width: 880px;
+    }
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      padding: 18px 52px 18px 20px;
+      font-weight: 500;
+      line-height: 1.45;
+      list-style: none;
+      position: relative;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-ember);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p {
+      padding: 0 20px 18px;
+      color: var(--color-ink-soft);
+      font-size: 16px;
+      line-height: 1.55;
+    }
     .cta {
       background: var(--color-hero-bg);
       background-image: url('https://storage.yandexcloud.net/mcv26/hero-gr.jpg');
@@ -767,6 +867,54 @@
       margin-bottom: 32px;
       max-width: 36ch;
     }
+    .doctor { padding: var(--space-120) 0; background: var(--color-bone); }
+    .doctor-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: var(--space-64);
+      align-items: center;
+    }
+    .doctor-photo {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-img);
+    }
+    .doctor-label {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--color-ember);
+      margin-bottom: var(--space-16);
+    }
+    .doctor h2 {
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--color-ink);
+      margin-bottom: var(--space-24);
+    }
+    .doctor-text {
+      max-width: 42ch;
+      margin-bottom: var(--space-32);
+      color: var(--color-ink-soft);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .doctor-text strong { color: var(--color-ink); font-weight: 500; }
+    .doctor-more { margin: -8px 0 24px; }
+    .doctor-more a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.2s ease;
+    }
+    .doctor-more a:hover { opacity: 1; }
     .cta-form {
       background: rgba(0, 78, 137, 0.35);
       -webkit-backdrop-filter: blur(16px) saturate(1.2);
@@ -951,6 +1099,9 @@
       .illustration-slot--round { max-width: 320px; }
       .why-grid { grid-template-columns: 1fr; }
       .cta-grid { grid-template-columns: 1fr; gap: 40px; }
+      .doctor-grid { grid-template-columns: 1fr; gap: var(--space-48); }
+      .doctor-photo { max-width: 280px; margin: 0 auto; }
+      .doctor { padding: var(--space-80) 0; }
       section { padding: var(--space-64) 0; }
     }
     @media (max-width: 600px) {
@@ -967,6 +1118,7 @@
         <img src="logo.svg" alt="Медицинский центр Власова" width="140" height="36" />
       </a>
       <ul class="nav-links" id="nav-links">
+        <li><a href="#doctor" data-nav>Специалист</a></li>
         <li><a href="#about" data-nav>О заболевании</a></li>
         <li><a href="#symptoms" data-nav>Симптомы</a></li>
         <li><a href="#methods" data-nav>Методы</a></li>
@@ -993,13 +1145,34 @@
             <span class="line">позвоночника</span>
             <span class="line">в Ставрополе</span>
           </h1>
-          <p class="hero-lead">Комплексный подход без хирургического вмешательства. Индивидуальная программа лечения и реабилитации после консультации и необходимого обследования.</p>
+          <p class="hero-lead">Консервативное лечение межпозвоночной грыжи в Ставрополе без хирургического вмешательства, когда для этого есть показания. Врач-невролог составляет индивидуальную программу лечения и реабилитации после консультации и необходимого обследования.</p>
           <a href="#cta" class="btn-ember">
             <span>Записаться на консультацию</span>
             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
         </div>
         <div class="hero-visual" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- DOCTOR -->
+    <section class="doctor" id="doctor">
+      <div class="container doctor-grid">
+        <div>
+          <img src="https://storage.yandexcloud.net/mcv26/daria_yuryevna00.jpg" alt="Дарья Юрьевна Колесникова — врач-невролог, физиотерапевт" class="doctor-photo" width="400" height="533" loading="lazy" />
+        </div>
+        <div>
+          <div class="doctor-label">Специалист</div>
+          <h2>Дарья Юрьевна Колесникова</h2>
+          <p class="doctor-text"><strong>Врач-невролог</strong>, цефалголог, физиотерапевт. Специалист Медицинского центра Власова.</p>
+          <p class="doctor-more">
+            <a href="https://mcv26.ru/doctors/kolesnikova-darya-yurevna-stavropol/" target="_blank" rel="noopener noreferrer">Подробнее о враче</a>
+          </p>
+          <a href="#cta" class="btn-ember">
+            <span>Записаться на приём</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -1013,7 +1186,7 @@
         <div class="section-intro">
           <div class="section-intro-text">
             <h2 class="section-title">Что такое грыжа позвоночника</h2>
-            <p class="section-desc">Межпозвонковый диск состоит из прочного фиброзного кольца и полужидкого студенистого ядра. Он амортизирует нагрузки и обеспечивает подвижность позвоночника. При повреждении кольца ядро выпячивается — это и есть грыжа.</p>
+            <p class="section-desc">Межпозвоночная грыжа — это повреждение межпозвонкового диска, при котором его содержимое выпячивается за нормальные анатомические границы и может воздействовать на нервные структуры. Диск состоит из прочного фиброзного кольца и полужидкого студенистого ядра, амортизирует нагрузки и обеспечивает подвижность позвоночника.</p>
           </div>
           <div class="illustration-slot illustration-slot--round" id="ill-001">
             <img src="https://storage.yandexcloud.net/mcv26/grizha_001.jpeg" alt="Иллюстрация: что такое грыжа позвоночника" width="640" height="640" loading="lazy" />
@@ -1200,6 +1373,39 @@
             <h3>Комплексный подход</h3>
             <p>Сочетаем ФДТ, МИС, лазеротерапию и другие методы. Используем современное оборудование и постоянно внедряем новые эффективные схемы.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-left">Вопросы и ответы</div>
+          <span class="section-num">(05)</span>
+        </div>
+        <h2 class="section-title">Частые вопросы о межпозвоночной грыже</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Можно ли лечить межпозвоночную грыжу без операции?</summary>
+            <p>В ряде случаев возможно консервативное лечение. Подход зависит от симптомов, результатов обследования и общего состояния пациента; тактику определяет врач.</p>
+          </details>
+          <details class="faq-item">
+            <summary>К какому врачу обращаться при грыже позвоночника?</summary>
+            <p>Первично можно обратиться к врачу-неврологу. Он оценит симптомы, проведёт осмотр и при необходимости определит дальнейшую тактику.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Нужно ли делать МРТ перед приемом невролога?</summary>
+            <p>Не обязательно выполнять МРТ самостоятельно до приёма. Необходимое обследование определяет врач после консультации.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Когда при грыже позвоночника может потребоваться операция?</summary>
+            <p>Необходимость операции определяется индивидуально, с учётом симптомов, неврологического статуса и результатов обследования.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Можно ли заниматься физической активностью при межпозвоночной грыже?</summary>
+            <p>Допустимая физическая активность зависит от состояния пациента и рекомендаций врача. Нагрузку следует подбирать индивидуально.</p>
+          </details>
         </div>
       </div>
     </section>
